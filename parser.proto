@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package parser;
 
-option go_package = "github.com/your_username/proto-definitions/parser";
+option go_package = "github.com/skxrx/proto-definitions/parser";
 
 service ParserService {
   rpc GetEvents (GetEventsRequest) returns (GetEventsResponse);
