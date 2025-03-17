@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package crypto;
 
-option go_package = "github.com/skxrx/proto-definitions/crypto";
+option go_package = "gen/crypto";
 
 service CryptoService {
   rpc CreateCryptoCurrency (CreateCryptoRequest) returns (CreateCryptoResponse);
@@ -19,21 +19,21 @@ message CreateCryptoRequest {
 }
 
 message CryptoCurrency {
-  string id = 1; // UUID
+  string id = 1;
   int32 cmc_id = 2;
   string platform = 3;
   string network = 4;
   string contract = 5;
-  string created_at = 6; // ISO 8601 timestamp
-  string updated_at = 7; // ISO 8601 timestamp
+  string created_at = 6;
+  string updated_at = 7;
 }
 
 message CreateCryptoResponse {
-  string id = 1; 
+  string id = 1;
 }
 
 message GetCryptoRequest {
-  string id = 1; 
+  string id = 1;
 }
 
 message GetCryptoResponse {
@@ -41,7 +41,7 @@ message GetCryptoResponse {
 }
 
 message UpdateCryptoRequest {
-  string id = 1; 
+  string id = 1;
   int32 cmc_id = 2;
   string platform = 3;
   string network = 4;
@@ -57,5 +57,5 @@ message DeleteCryptoRequest {
 }
 
 message DeleteCryptoResponse {
-  bool success = 1; 
+  bool success = 1;
 }
